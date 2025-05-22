@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Table football specific colors
+				victory: '#10B981', // Green for wins
+				defeat: '#EF4444', // Red for losses
+				highlight: '#F59E0B', // Amber for highlights
+				tableblue: '#3B82F6', // Blue for primary actions
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +90,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'celebration': {
+					'0%, 100%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.05)' },
+				},
+				'slide-up': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				'pulse-soft': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'celebration': 'celebration 0.5s ease-in-out',
+				'slide-up': 'slide-up 0.3s ease-out',
+				'pulse-soft': 'pulse-soft 2s infinite',
 			}
 		}
 	},
