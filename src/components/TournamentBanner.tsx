@@ -3,6 +3,7 @@ import { Trophy, Calendar } from 'lucide-react';
 import { Tournament } from '../types/models';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
 
